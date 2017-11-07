@@ -1,18 +1,25 @@
 {
-    "country": [
+    "player": [
         {
             "Position": "AF",
-            "Region": "AS",
+            "Squad_No": "AS",
             "Name": "Afghanistan",
-            "Capital": "Kabul",
-            "Phone_code": 93
+            "Club": "Kabul",
+            "Age": 93
         },
         {
-            "Position": "tert",
-            "Region": "",
+            "Position": "RB",
+            "Squad_No": "56",
+            "Name": "Tetsuya",
+            "Club": "Arsenal",
+            "Age": "26"
+        },
+        {
+            "Position": "",
+            "Squad_No": "7",
             "Name": "",
-            "Capital": "",
-            "Phone_code": ""
+            "Club": "",
+            "Age": ""
         }
     ]
 }

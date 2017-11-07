@@ -47,8 +47,8 @@ router.post('/post/json', function(req, res) {
     // Parse the JSON file in order to be able to edit it 
     var JSONparsed = JSON.parse(JSONfile);
 
-    // Add a new record into country array within the JSON file    
-    JSONparsed.country.push(obj);
+    // Add a new record into player array within the JSON file    
+    JSONparsed.player.push(obj);
 
     // Beautify the resulting JSON file
     var JSONformated = JSON.stringify(JSONparsed, null, 4);

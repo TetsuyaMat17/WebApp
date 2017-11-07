@@ -22,10 +22,11 @@
 					<tr>
 						<th>Position</th>
 						<th>Name</th>
-						<th>Capital</th>
-						<th>Phone code</th>
+						<th>Squad Number</th>
+						<th>Club</th>
+						<th>Age</th>
 					</tr>
-					<xsl:for-each select="squad/country">
+					<xsl:for-each select="squad/player">
 							<tr>
 								<td>
 									<xsl:value-of select="Position"/>
@@ -34,10 +35,13 @@
 									<xsl:value-of select="Name"/>
 								</td>
 								<td>
-									<xsl:value-of select="Capital"/>
+									<xsl:value-of select="Squad_No"/>
 								</td>
 								<td>
-									<xsl:value-of select="Phone_code"/>
+									<xsl:value-of select="Club"/>
+								</td>
+								<td>
+									<xsl:value-of select="Age"/>
 								</td>
 							</tr>
 					</xsl:for-each>

@@ -1,17 +1,24 @@
 <?xml version='1.0'?>
 <squad>
-    <country>
+    <player>
         <Position>AF</Position>
-        <Region>AS</Region>
+        <Squad_No>AS</Squad_No>
         <Name>Afghanistan</Name>
-        <Capital>Kabul</Capital>
-        <Phone_code>93</Phone_code>
-    </country>
-    <country>
-        <Position>tert</Position>
-        <Region></Region>
+        <Club>Kabul</Club>
+        <Age>93</Age>
+    </player>
+    <player>
+        <Position>RB</Position>
+        <Squad_No>56</Squad_No>
+        <Name>Tetsuya</Name>
+        <Club>Arsenal</Club>
+        <Age>26</Age>
+    </player>
+    <player>
+        <Position></Position>
+        <Squad_No>7</Squad_No>
         <Name></Name>
-        <Capital></Capital>
-        <Phone_code></Phone_code>
-    </country>
+        <Club></Club>
+        <Age></Age>
+    </player>
 </squad>
