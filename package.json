@@ -1,7 +1,7 @@
 {
-  "name": "wad-simple-demo",
+  "name": "WebApplicationDevelopment",
   "version": "1.0.0",
-  "description": "demo app to make AJAX requests to load results of XSL transformation and send POST requests to add new information to JSON and XML files",
+  "description": "Web Application Demo",
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -16,8 +16,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mikhail-nci/wad-simple-demo.git"
+    "url": "git+https://github.com/TetsuyaMat17/WebApp.git"
   },
-  "author": "Mikhail",
-  "homepage": "https://github.com/mikhail-nci/wad-simple-demo#readme"
+  "author": "Tetsuya",
+  "homepage": "https://github.com/TetsuyaMat17/WebApp.git#readme"
 }
