@@ -8,24 +8,10 @@
         <Age>93</Age>
     </player>
     <player>
-        <Position>RB</Position>
-        <Squad_No>56</Squad_No>
-        <Name>Tetsuya</Name>
-        <Club>Arsenal</Club>
-        <Age>26</Age>
-    </player>
-    <player>
-        <Position></Position>
-        <Squad_No>7</Squad_No>
-        <Name></Name>
-        <Club></Club>
-        <Age></Age>
-    </player>
-    <player>
-        <Position>test</Position>
-        <Squad_No>test</Squad_No>
-        <Name>test</Name>
-        <Club></Club>
-        <Age></Age>
+        <Position>et</Position>
+        <Squad_No>et</Squad_No>
+        <Name>set</Name>
+        <Club>te</Club>
+        <Age>st</Age>
     </player>
 </squad>

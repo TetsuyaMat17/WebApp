@@ -1,4 +1,4 @@
-## Demo app to work with AJAX, JSON and XML files
+## Web Application Development Project
 
 1. Run "npm install"
 2. Run "npm start"

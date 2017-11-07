@@ -8,25 +8,11 @@
             "Age": 93
         },
         {
-            "Position": "RB",
-            "Squad_No": "56",
-            "Name": "Tetsuya",
-            "Club": "Arsenal",
-            "Age": "26"
-        },
-        {
-            "Position": "",
-            "Squad_No": "7",
-            "Name": "",
-            "Club": "",
-            "Age": ""
-        },
-        {
-            "Position": "test",
-            "Squad_No": "test",
-            "Name": "test",
-            "Club": "",
-            "Age": ""
+            "Position": "et",
+            "Squad_No": "et",
+            "Name": "set",
+            "Club": "te",
+            "Age": "st"
         }
     ]
 }
