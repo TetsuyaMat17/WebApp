@@ -1,13 +1,6 @@
 <?xml version='1.0'?>
 <squad>
     <player>
-        <Position>AF</Position>
-        <Squad_No>AS</Squad_No>
-        <Name>Afghanistan</Name>
-        <Club>Kabul</Club>
-        <Age>93</Age>
-    </player>
-    <player>
         <Position>et</Position>
         <Squad_No>et</Squad_No>
         <Name>set</Name>

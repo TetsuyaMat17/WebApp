@@ -1,13 +1,6 @@
 {
     "player": [
         {
-            "Position": "AF",
-            "Squad_No": "AS",
-            "Name": "Afghanistan",
-            "Club": "Kabul",
-            "Age": 93
-        },
-        {
             "Position": "et",
             "Squad_No": "et",
             "Name": "set",
