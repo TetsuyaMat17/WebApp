@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<squad>
+    <player>
+        <Position>et</Position>
+        <Squad_No>et</Squad_No>
+        <Name>set</Name>
+        <Club>te</Club>
+        <Age>st</Age>
+    </player>
+    <player>
+        <Position>lkhdewl</Position>
+        <Name></Name>
+        <Squad_No></Squad_No>
+        <Club></Club>
+        <Age></Age>
+    </player>
+    <player>
+        <Position>lk</Position>
+        <Name></Name>
+        <Squad_No></Squad_No>
+        <Club></Club>
+        <Age></Age>
+    </player>
+</squad>
