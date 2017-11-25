@@ -64,7 +64,7 @@ router.post('/post/json', function(req, res) {
 
   }
 
-  // Call appendJSON function and pass in body of the current POST request
+ /* // Call appendJSON function and pass in body of the current POST request
   appendJSON(req.body);
   
   // Re-direct the browser back to the page, where the POST request came from
@@ -76,3 +76,25 @@ server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() 
   var addr = server.address();
   console.log("Server listening at", addr.address + ":" + addr.port);
 });
+
+  function highlight(){
+    var JSONfile = document.getElementById('Squad.json');
+    for (var i=0;i < table.rows.length; i++){
+      table.rows[i].onclick= function () {
+        if(!this.hilite){
+          unhighlight();
+          this.origColor=this.style.backgroundColor;
+          this.style.backgroundColor='#BCD4EC';
+          this.hilite = true;
+        }
+        else{
+          this.style.backgroundColor=this.origColor;
+          this.hilite = false;
+       
+  
+  
+
+}
+            }
+            }*/
+            } 

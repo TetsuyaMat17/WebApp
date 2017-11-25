@@ -24,6 +24,24 @@
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
   <script>
+    window.addEventListener('load', loader, false);
+    function loader (e) {
+      e.preventDefault ();
+      document.getElementbyId ('emailinput') .addEventListener
+        ('submit', validateEmail, false);
+    }
+    
+    function validateEmail (e) {
+      var re = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i;
+      if (re.test (e.target.yourEmail.value)) {
+        alert("valid!");
+      } else{
+        alert ("invalid!");
+      }
+      }
+    
+  </script>
+  <script>
     function load() {
       $.ajax({
         url: "/get/html",
@@ -38,9 +56,34 @@
       load();
     });
   </script>
+  <script>
+   /*function highlight(){
+    var JSONfile = document.getElementById('Squad.xml');
+    for (var i=0;i < table.rows.length; i++){
+      table.rows[i].onclick= function () {
+        if(!this.hilite){
+          unhighlight();
+          this.origColor=this.style.backgroundColor;
+          this.style.backgroundColor='#BCD4EC';
+          this.hilite = true;
+        }
+        else{
+          this.style.backgroundColor=this.origColor;
+          this.hilite = false;
+        }
+        }
+      }
+    }*/
+  </script>
 </head>
 
 <body>
+  <form id="emailinput">
+    <label>Enter an email address:
+    <input type="text" id="yourEmail">
+    </label>
+    <input type="submit" value="Validate" id="validate">
+  </form>
   <div class="container">
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
