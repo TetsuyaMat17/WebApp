@@ -1,200 +1,192 @@
-<?xml version='1.0'?>
- <squad>
-     <player>
-         <Position>GK</Position>
-         <Squad_No>23</Squad_No>
-         <Name>Darren Randolph</Name>
-         <Club>Middlesboro</Club>
-         <Age>32</Age>
-     </player>
-     <player>
-         <Position>GK</Position>
-         <Squad_No>16</Squad_No>
-         <Name>Rob Elliot</Name>
-         <Club>Newcastle</Club>
-         <Age>31</Age>
-     </player>
-     <player>
-         <Position>GK</Position>
-         <Squad_No>1</Squad_No>
-         <Name>Keiren Westwood</Name>
-         <Club>Sheffield Wednesday</Club>
-         <Age>33</Age>
-     </player>
-      <player>
-         <Position>DF</Position>
-         <Squad_No>2</Squad_No>
-         <Name>Seamus Coleman</Name>
-         <Club>Everton</Club>
-         <Age>29</Age>
-     </player>
-     <player>
-         <Position>DF</Position>
-         <Squad_No>15</Squad_No>
-         <Name>Cyrus Christie</Name>
-         <Club>Derby County</Club>
-         <Age>25</Age>
-     </player>
-     <player>
-         <Position>DF</Position>
-         <Squad_No>3</Squad_No>
-         <Name>Ciaran Clark</Name>
-         <Club>Newcastle</Club>
-         <Age>28</Age>
-     </player>
-     <player>
-         <Position>DF</Position>
-         <Squad_No>20</Squad_No>
-         <Name>Shane Duffy</Name>
-         <Club>Brighton and Hove Albion</Club>
-         <Age>25</Age>
-     </player>
-     <player>
-         <Position>DF</Position>
-         <Squad_No>5</Squad_No>
-         <Name>Richard Keogh</Name>
-         <Club>Derby County</Club>
-         <Age>31</Age>
-     </player>
-     <player>
-         <Position>DF</Position>
-         <Squad_No>19</Squad_No>
-         <Name>Paul McShane</Name>
-         <Club>Reading FC</Club>
-         <Age>31</Age>
-     </player>
-      <player>
-         <Position>DF</Position>
-         <Squad_No>4</Squad_No>
-         <Name>John O'Shea</Name>
-         <Club>Sunderland</Club>
-         <Age>36</Age>
-     </player>
-     <player>
-         <Position>DF</Position>
-         <Squad_No>12</Squad_No>
-         <Name>Alex Pearce</Name>
-         <Club>Derby County</Club>
-         <Age>29</Age>
-     </player>
-     <player>
-         <Position>DF</Position>
-         <Squad_No>17</Squad_No>
-         <Name>Stephen Ward</Name>
-         <Club>Burnley</Club>
-         <Age>32</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>22</Squad_No>
-         <Name>Harry Arter</Name>
-         <Club>AFC Bournemouth</Club>
-         <Age>27</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>10</Squad_No>
-         <Name>Robbie Brady</Name>
-         <Club>Burnley</Club>
-         <Age>25</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>28</Squad_No>
-         <Name>Jonathan Hayes</Name>
-         <Club>Celtic</Club>
-         <Age>30</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>13</Squad_No>
-         <Name>Jeff Hendrick</Name>
-         <Club>Burnley</Club>
-         <Age>25</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>14</Squad_No>
-         <Name>Wes Hoolahan</Name>
-         <Club>Norwich</Club>
-         <Age>35</Age>
-     </player>
-      <player>
-         <Position>MF</Position>
-         <Squad_No>11</Squad_No>
-         <Name>James McClean</Name>
-         <Club>West Bromwich Albion</Club>
-         <Age>28</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>8</Squad_No>
-         <Name>James McCarthy</Name>
-         <Club>Everton</Club>
-         <Age>27</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>18</Squad_No>
-         <Name>David Meyler</Name>
-         <Club>Hull City</Club>
-         <Age>28</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>7</Squad_No>
-         <Name>Aiden McGeady</Name>
-         <Club>Sunderland</Club>
-         <Age>31</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>15</Squad_No>
-         <Name>Conor Hourihane</Name>
-         <Club>Aston Villa</Club>
-         <Age>26</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>12</Squad_No>
-         <Name>Callum O'Dowda</Name>
-         <Club>Bristol City</Club>
-         <Age>22</Age>
-     </player>
-     <player>
-         <Position>MF</Position>
-         <Squad_No>6</Squad_No>
-         <Name>Glenn Whelan</Name>
-         <Club>Aston Villa</Club>
-         <Age>33</Age>
-     </player>
-     <player>
-         <Position>ST</Position>
-         <Squad_No>9</Squad_No>
-         <Name>Shane Long</Name>
-         <Club>Southampton</Club>
-         <Age>30</Age>
-     </player>
-     <player>
-         <Position>ST</Position>
-         <Squad_No>21</Squad_No>
-         <Name>Daryl Murphy</Name>
-         <Club>Ipswich</Club>
-         <Age>34</Age>
-     </player>
-     <player>
-         <Position>ST</Position>
-         <Squad_No></Squad_No>
-         <Name>David McGoldrick</Name>
-         <Club>Ipswich</Club>
-         <Age>30</Age>
-     </player>
-     <player>
-         <Position>ST</Position>
-         <Squad_No></Squad_No>
-         <Name>Johnny Walters</Name>
-         <Club>Burnley</Club>
-         <Age>34</Age>
-     </player>
-   
- </squad> 
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<squad>
+  <player>
+    <Position>GK</Position>
+    <Squad_No>23</Squad_No>
+    <Name>Darren Randolph</Name>
+    <Club>Middlesboro</Club>
+    <Age>32</Age>
+  </player>
+  <player>
+    <Position>GK</Position>
+    <Squad_No>16</Squad_No>
+    <Name>Rob Elliot</Name>
+    <Club>Newcastle</Club>
+    <Age>31</Age>
+  </player>
+  <player>
+    <Position>GK</Position>
+    <Squad_No>1</Squad_No>
+    <Name>Keiren Westwood</Name>
+    <Club>Sheffield Wednesday</Club>
+    <Age>33</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>2</Squad_No>
+    <Name>Seamus Coleman</Name>
+    <Club>Everton</Club>
+    <Age>29</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>15</Squad_No>
+    <Name>Cyrus Christie</Name>
+    <Club>Derby County</Club>
+    <Age>25</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>3</Squad_No>
+    <Name>Ciaran Clark</Name>
+    <Club>Newcastle</Club>
+    <Age>28</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>20</Squad_No>
+    <Name>Shane Duffy</Name>
+    <Club>Brighton and Hove Albion</Club>
+    <Age>25</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>5</Squad_No>
+    <Name>Richard Keogh</Name>
+    <Club>Derby County</Club>
+    <Age>31</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>19</Squad_No>
+    <Name>Paul McShane</Name>
+    <Club>Reading FC</Club>
+    <Age>31</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>4</Squad_No>
+    <Name>John O'Shea</Name>
+    <Club>Sunderland</Club>
+    <Age>36</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>12</Squad_No>
+    <Name>Alex Pearce</Name>
+    <Club>Derby County</Club>
+    <Age>29</Age>
+  </player>
+  <player>
+    <Position>DF</Position>
+    <Squad_No>17</Squad_No>
+    <Name>Stephen Ward</Name>
+    <Club>Burnley</Club>
+    <Age>32</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>22</Squad_No>
+    <Name>Harry Arter</Name>
+    <Club>AFC Bournemouth</Club>
+    <Age>27</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>10</Squad_No>
+    <Name>Robbie Brady</Name>
+    <Club>Burnley</Club>
+    <Age>25</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>28</Squad_No>
+    <Name>Jonathan Hayes</Name>
+    <Club>Celtic</Club>
+    <Age>30</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>13</Squad_No>
+    <Name>Jeff Hendrick</Name>
+    <Club>Burnley</Club>
+    <Age>25</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>14</Squad_No>
+    <Name>Wes Hoolahan</Name>
+    <Club>Norwich</Club>
+    <Age>35</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>11</Squad_No>
+    <Name>James McClean</Name>
+    <Club>West Bromwich Albion</Club>
+    <Age>28</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>8</Squad_No>
+    <Name>James McCarthy</Name>
+    <Club>Everton</Club>
+    <Age>27</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>18</Squad_No>
+    <Name>David Meyler</Name>
+    <Club>Hull City</Club>
+    <Age>28</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>7</Squad_No>
+    <Name>Aiden McGeady</Name>
+    <Club>Sunderland</Club>
+    <Age>31</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>15</Squad_No>
+    <Name>Conor Hourihane</Name>
+    <Club>Aston Villa</Club>
+    <Age>26</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>12</Squad_No>
+    <Name>Callum O'Dowda</Name>
+    <Club>Bristol City</Club>
+    <Age>22</Age>
+  </player>
+  <player>
+    <Position>MF</Position>
+    <Squad_No>6</Squad_No>
+    <Name>Glenn Whelan</Name>
+    <Club>Aston Villa</Club>
+    <Age>33</Age>
+  </player>
+  <player>
+    <Position>ST</Position>
+    <Squad_No>9</Squad_No>
+    <Name>Shane Long</Name>
+    <Club>Southampton</Club>
+    <Age>30</Age>
+  </player>
+  <player>
+    <Position>ST</Position>
+    <Squad_No>21</Squad_No>
+    <Name>Daryl Murphy</Name>
+    <Club>Ipswich</Club>
+    <Age>34</Age>
+  </player>
+  <player>
+    <Position>ST</Position>
+    <Squad_No/>
+    <Name>David McGoldrick</Name>
+    <Club>Ipswich</Club>
+    <Age>30</Age>
+  </player>
+</squad>

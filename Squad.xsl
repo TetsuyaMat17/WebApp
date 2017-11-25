@@ -18,7 +18,7 @@
 			  </style>
 			</head>
 			<body>
-				<table>
+				<table id="table">
 					<tr>
 						<th>Position</th>
 						<th>Name</th>
@@ -27,7 +27,7 @@
 						<th>Age</th>
 					</tr>
 					<xsl:for-each select="squad/player">
-							<tr>
+							<tr id="{position()}">
 								<td>
 									<xsl:value-of select="Position"/>
 								</td>

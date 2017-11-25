@@ -20,6 +20,10 @@
       border: 1px solid black;
       text-align: center;
     }
+    .selected {
+      background-color:green;
+      color: #00ff00;
+    }
   </style>
   <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
@@ -27,7 +31,7 @@
     window.addEventListener('load', loader, false);
     function loader (e) {
       e.preventDefault ();
-      document.getElementbyId ('emailinput') .addEventListener
+      document.getElementById('emailinput').addEventListener
         ('submit', validateEmail, false);
     }
     
@@ -48,6 +52,22 @@
         cache: false,
         success: function(html) {
           $("#results").append(html);
+          $("#table tbody tr").click(function () {
+            $(".selected").removeClass("selected");
+            $(this).addClass("selected");
+            var $row=$(this).attr("id");   
+            var $info=$(this).attr("info");
+            alert($info);
+            $("#delete").click( function() {
+              $.ajax({
+                url: "/post/delete",
+                cache: false,
+                type: "POST",
+                data: { row:$row }
+              })
+            })
+
+          })
         }
       });
     };
@@ -56,25 +76,7 @@
       load();
     });
   </script>
-  <script>
-   /*function highlight(){
-    var JSONfile = document.getElementById('Squad.xml');
-    for (var i=0;i < table.rows.length; i++){
-      table.rows[i].onclick= function () {
-        if(!this.hilite){
-          unhighlight();
-          this.origColor=this.style.backgroundColor;
-          this.style.backgroundColor='#BCD4EC';
-          this.hilite = true;
-        }
-        else{
-          this.style.backgroundColor=this.origColor;
-          this.hilite = false;
-        }
-        }
-      }
-    }*/
-  </script>
+
 </head>
 
 <body>
@@ -118,22 +120,12 @@
                 <button type="submit">Submit</button>
               </div>
             </form>
-             <form enctype='application/json' action="/post/json" method="post">
-               <div class="field">
-                <button type="delete">Delete</button>
-              </div>
-            </form>
+                <button id="delete">Delete</button>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  
-  <br><br>
-    <h1><a href="squads.html">Squads</a></h1>
-		
-		<br><br><br>
-  
 </body>
 
 </html>
