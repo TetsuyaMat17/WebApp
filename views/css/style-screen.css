@@ -18,6 +18,12 @@ body {
 	text-align: center;
 }
 
+#table1 {
+	border-collapse: collapse; 
+	border: 1px solid #839E99;
+  background: #f1f8ee; 
+}
+
 /* drag objects (DIV inside table cells) */
 .redips-drag {
 	cursor: move;
@@ -67,18 +73,19 @@ body {
 div#redips-drag table {
 	background-color: #eee;
 	border-collapse: collapse;
+	border: none;
 }
 	/* table cells */
 	div#redips-drag td {
 		height: 22px;
-		border: 1px solid white;
+		border: 0;
 		/* needed for FF3/FF4 because highlighting left table cell was working strange */
 		/* if DIV element was dragged fast then left table cell was properly highlighted */
 		/* otherwise was not ... setting border-left to 0px solved this problem */
 		border-left: 0px;
 		text-align: center;
 		font-size: 10pt;
-		padding: 2px;
+		padding: 0;
 	}
 
 

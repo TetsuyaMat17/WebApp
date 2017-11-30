@@ -123,6 +123,40 @@ router.post('/post/delete', function(req, res) {
 
 });
 
+
+
+router.post('/post6/json', function(req, res) {
+ 
+	var content = req.body.table_content;
+
+	var parsedContent = JSON.parse(content);
+	
+		fs.writeFile('views/test.json', parsedContent,'utf8', function (err) {
+			if (err) {
+				// append failed
+			} else {
+				// done
+			}
+		})
+	res.sendStatus(200)
+	
+	/* Logging used to test and verify data
+	console.log(parsedContent);
+	console.log(req.body);
+	console.log(req.body.table_content);
+	*/
+});
+
+
+
+router.get("/squads", function(request, response) {
+  response.render('squads');
+});
+
+router.get("*", function(request, response) {
+  response.end("404!");
+});
+
 server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function() {
   var addr = server.address();
   console.log("Server listening at", addr.address + ":" + addr.port);
