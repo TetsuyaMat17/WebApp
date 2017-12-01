@@ -60,6 +60,9 @@ body {
 		}
 			#left {
 				width: 260px;
+				height:340px;
+  			overflow:auto;  
+
 			}
 		/* container for the right table */
 		#right {

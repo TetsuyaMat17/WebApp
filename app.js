@@ -44,6 +44,8 @@ router.post('/post/json', function(req, res) {
     fs.readFile(filepath, 'utf8', function(err, xmlStr) {
       if (err) throw (err);
       xml2js.parseString(xmlStr, {}, cb);
+			var test = xml2js.parseString(xmlStr, {}, cb);
+			console.log(test);	
     });
   }
 
@@ -69,7 +71,31 @@ router.post('/post/json', function(req, res) {
     
      }
 
-  // Call appendJSON function and pass in body of the current POST request
+	var parser = new xml2js.Parser();
+	
+	fs.readFile('Squad.xml',function(err,data){
+							
+		parser.parseString(data,function(err,result){
+		
+		var JSONStringy = JSON.stringify(result, null, 4);
+		fs.writeFileSync('Squadtest.json', JSONStringy);
+		//console.log(JSONStringy);					 
+		});
+							
+	});
+	
+	
+	/*fs.readFile('Squadtest.json', 'utf8', (err, data) => {
+  if (err) throw err;
+  data = JSON.parse(data);
+  data = data.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
+  var stringy = JSON.stringify(data);
+	console.log(data);
+	console.log(stringy);
+	fs.writeFileSync('views/squadtest2.json', stringy);
+	});*/
+	
+	// Call appendJSON function and pass in body of the current POST request
   appendJSON(req.body);
 
   // Re-direct the browser back to the page, where the POST request came from

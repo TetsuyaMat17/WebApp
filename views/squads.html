@@ -29,9 +29,16 @@
 			</style>
 			<style>
 				#table1 { position: relative;
+				float:right;
 				background: url("footballpitch.jpg") no-repeat;
 				border-radius: 25px;
 				border-collapse: collapse;
+				}
+				
+				#table3{
+					
+					float:right;
+					
 				}
 				
 			</style>
@@ -70,10 +77,10 @@
 							<td></td>
 						</tr>
 						<tr>
-							<td></td>							
+							<td></td>
 						</tr>
 						<tr>
-							<td></td>							
+							<td></td>
 						</tr>
 						<tr>
 							<td><div class="redips-drag">Robbie Brady</div></td>							
@@ -202,90 +209,23 @@
 			<table id="table3">
 				<colgroup><col width="100"/><col width="100"/><col width="100"/><col width="100"/><col width="100"/></colgroup>
 				<tr style="background-color: #eee">
-					<td id="message" class="redips-mark" title="You can not drop here">Table3</td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td id="message" class="redips-mark"></td>
+					<td><input class="button" type="button" value="Load" title="Load content from server" onclick="redips.button1()"/></td>
+					<td><input type="button" value="Save" class="button" onclick="save('json')" title="Send content to the server"/></td>
+					<td><input class="button clear" type="button" value="Clear" title="Clear table content" onclick="redips.clearTable()"/></td>
 					<td class="redips-trash" title="Trash">Trash</td>
 				</tr>
 			</table>
-			<br><br><br><br><br><br>
-			<div><input class="button" type="button" value="Load" title="Load content from server" onclick="redips.button1()"/></div>
-			<br>
-			<div><input type="button" value="Save" class="button" onclick="save('json')" title="Send content to the server"/></div>
-			<br>
-			<div><input class="button clear" type="button" value="Clear" title="Clear table content" onclick="redips.clearTable()"/></div>
-			<br>
+			<!--<div><input class="button" type="button" value="Load" title="Load content from server" onclick="redips.button1()"/><input type="button" value="Save" class="button" onclick="save('json')" title="Send content to the server"/><input class="button clear" type="button" value="Clear" title="Clear table content" onclick="redips.clearTable()"/></div>-->
 			<!-- <div><input type="radio" name="drop_option" class="checkbox" onclick="setMode(this)" value="multiple" title="Enabled dropping to already taken table cells" checked="true"/><span class="message_line">Enable dropping to already taken table cells</span></div>
 			<div><input type="radio" name="drop_option" class="checkbox" onclick="setMode(this)" value="single" title="Disabled dropping to already taken table cells"/><span class="message_line">Disable dropping to already taken table cells</span></div>
 			<div><input type="radio" name="drop_option" class="checkbox" onclick="setMode(this)" value="switch" title="Switch content"/><span class="message_line">Switch content</span></div>
 			<div><input type="radio" name="drop_option" class="checkbox" onclick="setMode(this)" value="switching" title="Switching content continuously"/><span class="message_line">Switching content continuously</span></div>
 			<div><input type="radio" name="drop_option" class="checkbox" onclick="setMode(this)" value="overwrite" title="Overwrite content"/><span class="message_line">Overwrite content</span></div>
 			<div><input type="checkbox" class="checkbox" onclick="toggleDeleteCloned(this)" title="Remove cloned object if dragged outside of any table" checked="true"/><span class="message_line">Remove cloned element if dragged outside of any table</span></div>-->
-			<div><input type="checkbox" class="checkbox" onclick="toggleConfirm(this)" title="Confirm delete"/><span class="message_line">Confirm delete</span></div>
+			<!-- <div><input type="checkbox" class="checkbox" onclick="toggleConfirm(this)" title="Confirm delete"/><span class="message_line">Confirm delete</span></div> -->
 			 <!-- <div><input type="checkbox" class="checkbox" onclick="toggleDragging(this)" title="Enable dragging" checked="true"/><span class="message_line">Enable dragging</span></div>-->
 		
-			<div>
-			<table id="table4" class="table table-bordered">
-				<colgroup><col width="100"/><col width="100"/><col width="100"/><col width="100"/><col width="100"/></colgroup>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<!-- <td><div id="d8" class="redips-drag t1"><img id="smile_img" src="/wp-includes/images/smilies/icon_smile.gif"/></div></td> -->
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<!-- <td><div id="d8" class="redips-drag t1"><img id="smile_img" src="/wp-includes/images/smilies/icon_smile.gif"/></div></td> -->
-				</tr>
-			</table>
-	</div>
-			
-			
-			
-			
-			
 			</div>	
 		</div>		
 	</body>
