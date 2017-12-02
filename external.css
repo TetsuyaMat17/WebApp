@@ -1,6 +1,6 @@
 #navbar{/*navigation bar information*/
 	position:center;
-	width:850px;
+	width:900px;
 	height:30px;
 	color:white;
 	position:absolute;
@@ -8,7 +8,7 @@
 	background-color:gray;
 	opacity:0.9;
 	margin-left:80px;
-	margin-top:80px;
+	margin-top:50px;
 
 }
 #navbar a:hover{
@@ -24,62 +24,14 @@
 position:static;
 }
 
-
-/*ireland image
-.squad{
-	float:right;
-	clear:right,left;
-	margin-left:80px;
-	margin-top:50px;
-	opacity:.8;
-}
-
-/*brazil image
-.brazil{
-margin-right:490px;
-float:left;
-opacity:.8;
-margin-top:50px;
-clear:right;
-}
-
-/*denmark image
-.denmark{
-	float:left;
-	opacity:.9;
-	margin-right:490px;
-	opacity:.8;
-	clear:right;
-}
-
-.bestplayers{
-	clear:right,left;
-	margin-top:50px;
-	float:center;
-	opacity:.9;
-}
-
-
-/*
-div.gallery img {
-    width: 15%;
-    
-}
-
-.group{
-	position:relative;
-	padding:5px;
-}
-
-.group2{
-	position:relative;
-	padding:5px;
-}*/
-
 .eriksen{
 	float:left;
 	padding-right:0.5px;
 	margin-left:300px;
+}
+
+.eriksen a:hover{ 
+
 }
 
 .mbappe{
@@ -95,7 +47,7 @@ div.gallery img {
 .group-d{
 	float:center;
 	clear:left,right;
-	margin-top:100px;
+	margin-top:30px;
 	margin-left:300px;
 }
 
@@ -127,3 +79,10 @@ div.gallery img {
    opacity:0.8;
    clear:left, right;
 }
+.scores{
+	
+	margin-top:156px;
+	position:absolute;
+	margin-left:300px;
+
+	}

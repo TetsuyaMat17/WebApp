@@ -18,25 +18,18 @@
 
 <body  background="stadium.jpg"> 
 
+	<script src="https://raw.github.com/leizongmin/js-xss/master/dist/xss.js"></script>
+	<script>
+	// apply function filterXSS in the same way
+	var html = filterXSS('<script>alert("xss");</scr' + 'ipt>');
+	alert(html);
+	</script> 
+
 
 	<div class="crest">
 		<img src="crest.png" alt="image of Ireland crest" style="width:80" height="80"/>
 	</div>
 
-	<!--<div class="container">
-		<div class="squad">
-			<img src="squad.jpg" alt="ireland squad" >
-		</div>
-		<div class = "brazil">-
-			<img src ="brazil.jpg" alt="other teams">
-		</div>
-		<div class = "denmark">
-			<img src ="denmark.jpg" alt="image of eriksen">
-		</div>
-		<div class ="bestplayers">
-			<img src ="bestplayers.png" alt="image of 3 players">
-		</div>
-	</div>-->
 	<div class="group">
 		<div class="bestplayers">
 			<img src="bestplayers.png" alt="image of 3 players top right">
@@ -49,15 +42,22 @@
 	<div = "group2">
 		<div class="eriksen">
 			<img src="denmark.png" alt="denmark bottom left">
-			<div class="centered">Eriksen Stuns</br>Irish</div>
+			
+			<!--div class="centered"></br>Irish</div>-->
 		</div>
 		<div class="mbappe">
 			<img src="mbappe.jpeg" alt="bottom center pic">
-			<div class="textbox2">Week 6</br>Star Player</div>
+			<!--<div class="textbox2">Week 6</br>Star Player</div>-->
 		</div>
 		<div class="worldCup">
 			<img src="worldCup.jpg" alt="bottom right pic">
 		</div>
 	</div>
-
+	
+	<div class = "scores">
+		<iframe src='http://www.goalserve.com/updaters/soccerupdate.aspx' width="616" height="150"
+		frameborder="3" marginwidth="0" marginheight="0" scrolling="auto" ></iframe>
+	</div>
+		
 </html>
+
