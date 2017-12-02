@@ -1,135 +1,64 @@
-<!doctype html>
-<html lang="en" ng-app>
+<!Doctype html>
+
+<html>
+
 
 <head>
-  <title>Republic of Ireland Squad</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
-  <style>
-    body {
-      padding-top: 60px;
-      padding-bottom: 60px;
-      
-    }
-    
-    table,
-    th,
-    td {
-      border-collapse: collapse;
-      border: 1px solid black;
-      text-align: center;
-    }
-    .selected {
-      background-color:green;
-      color: #00ff00;
-    }
-  </style>
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script>
-    window.addEventListener('load', loader, false);
-    function loader (e) {
-      e.preventDefault ();
-      document.getElementById('emailinput').addEventListener
-        ('submit', validateEmail, false);
-    }
-    
-    function validateEmail (e) {
-      var re = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i;
-      if (re.test (e.target.yourEmail.value)) {
-        alert("valid!");
-      } else{
-        alert ("invalid!");
-      }
-      }
-    
-  </script>
-  <script>
-    function load() {
-      $.ajax({
-        url: "/get/html",
-        cache: false,
-        success: function(html) {
-          $("#results").append(html);
-          $("#table tbody tr").click(function () {
-            $(".selected").removeClass("selected");
-            $(this).addClass("selected");
-            var $row=$(this).attr("id");   
-            var $info=$(this).attr("info");
-            alert($info);
-            $("#delete").click( function() {
-              $.ajax({
-                url: "/post/delete",
-                cache: false,
-                type: "POST",
-                data: { row:$row }
-              })
-            })
-
-          })
-        }
-      });
-    };
-
-    $(document).ready(function() {
-      load();
-    });
-  </script>
+	<title>Home Page</title>
+	<link rel="stylesheet" href="css/external.css"/> 
 
 </head>
 
-<body>
-  <form id="emailinput">
-    <label>Enter an email address:
-    <input type="text" id="yourEmail">
-    </label>
-    <input type="submit" value="Validate" id="validate">
-  </form>
-  <div class="container">
-    <div class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-      </div>
-    </div>
-    <div class="page-header">
-      <h1>Republic of Ireland Squad</h1>
-    </div>
-    <div class="row">
-      <div id="results" class="span8">
-      </div>
-      <div class="span4">
-        <ul class="nav nav-list well">
-          <li>
-            <form enctype='application/json' action="/post/json" method="post">
-              <div class="field">
-                <input type="text" name="Position" placeholder="Position">
-              </div>
-              <div class="field">
-                <input type="text" name="Name" placeholder="Name">
-              </div>
-              <div class="field">
-                <input type="text" name="Squad_No" placeholder="Squad Number">
-              </div>
-              <div class="field">
-                <input type="text" name="Club" placeholder="Club">
-              </div>
-              <div class="field">
-                <input type="text" name="Age" placeholder="Age">
-              </div>
-              <div class="field">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
-                <button id="delete">Delete</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-    <h1><a href="squads.html">Squads</a></h1>
-		
-		<br><br><br>
-</body>
+	<div id="navbar">
+		<a href="squadupdate.html">Squad update</a>
+		<a class ="navTxt">Squad</a>
+		<a class ="navTxt">Fixtures/Results</a>
+		<a class ="navTxt">Injury Table</a>
+		<a class ="navTxt">Team Stats</a>
+	</div>
 
+<body  background="stadium.jpg"> 
+
+	<script src="https://raw.github.com/leizongmin/js-xss/master/dist/xss.js"></script>
+	<script>
+	// apply function filterXSS in the same way
+	var html = filterXSS('<script>alert("xss");</scr' + 'ipt>');
+	alert(html);
+	</script> 
+
+
+	<div class="crest">
+		<img src="crest.png" alt="image of Ireland crest" style="width:80" height="80"/>
+	</div>
+
+	<div class="group">
+		<div class="bestplayers">
+			<img src="bestplayers.png" alt="image of 3 players top right">
+		</div>
+		<div class="group-d">
+			<img src="group-d.png" alt="group table top left">
+		</div>
+	</div>
+	
+	<div = "group2">
+		<div class="eriksen">
+			<img src="denmark.png" alt="denmark bottom left">
+			
+			<!--div class="centered"></br>Irish</div>-->
+		</div>
+		<div class="mbappe">
+			<img src="mbappe.jpeg" alt="bottom center pic">
+			<!--<div class="textbox2">Week 6</br>Star Player</div>-->
+		</div>
+		<div class="worldCup">
+			<img src="worldCup.jpg" alt="bottom right pic">
+		</div>
+	</div>
+	
+	<div class = "scores">
+		<iframe src='http://www.goalserve.com/updaters/soccerupdate.aspx' width="616" height="150"
+		frameborder="3" marginwidth="0" marginheight="0" scrolling="auto" ></iframe>
+	</div>
+		
 </html>
+

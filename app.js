@@ -179,6 +179,10 @@ router.get("/squads", function(request, response) {
   response.render('squads');
 });
 
+router.get("/squadupdate", function(request, response) {
+  response.render('squadupdate');
+});
+
 router.get("*", function(request, response) {
   response.end("404!");
 });
