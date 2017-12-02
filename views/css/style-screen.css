@@ -61,7 +61,8 @@ body {
 			#left {
 				width: 110px;
 				height:340px;
-  			overflow:auto;  
+  			overflow:auto;
+				border-radius: 25px;
 
 			}
 		/* container for the right table */
@@ -90,6 +91,8 @@ div#redips-drag table {
 		font-size: 10pt;
 		padding: 0;
 	}
+
+
 
 
 /* right tables */
