@@ -71,18 +71,6 @@ router.post('/post/json', function(req, res) {
     
      }
 
-	var parser = new xml2js.Parser();
-	
-	fs.readFile('Squad.xml',function(err,data){
-							
-		parser.parseString(data,function(err,result){
-		
-		var JSONStringy = JSON.stringify(result, null, 4);
-		fs.writeFileSync('Squadtest.json', JSONStringy);
-		//console.log(JSONStringy);					 
-		});
-							
-	});
 	
 	
 	/*fs.readFile('Squadtest.json', 'utf8', (err, data) => {

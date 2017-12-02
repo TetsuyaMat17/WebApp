@@ -57,7 +57,6 @@
             $(this).addClass("selected");
             var $row=$(this).attr("id");   
             var $info=$(this).attr("info");
-            alert($info);
             $("#delete").click( function() {
               $.ajax({
                 url: "/post/delete",
