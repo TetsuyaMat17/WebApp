@@ -6,6 +6,7 @@ var http = require('http'),
     js2xmlparser = require('js2xmlparser'),
     libxslt = require('libxslt'),
     xml2js = require('xml2js');
+		xml2jsonparser = require('xml2json');
 
 var router = express();
 var server = http.createServer(router);
@@ -44,8 +45,6 @@ router.post('/post/json', function(req, res) {
     fs.readFile(filepath, 'utf8', function(err, xmlStr) {
       if (err) throw (err);
       xml2js.parseString(xmlStr, {}, cb);
-			var test = xml2js.parseString(xmlStr, {}, cb);
-			console.log(test);	
     });
   }
 
@@ -69,25 +68,31 @@ router.post('/post/json', function(req, res) {
       })
     })
     
-     }
-
 	
-	
-	/*fs.readFile('Squadtest.json', 'utf8', (err, data) => {
-  if (err) throw err;
-  data = JSON.parse(data);
-  data = data.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
-  var stringy = JSON.stringify(data);
-	console.log(data);
-	console.log(stringy);
-	fs.writeFileSync('views/squadtest2.json', stringy);
-	});*/
+				
+  }
 	
 	// Call appendJSON function and pass in body of the current POST request
   appendJSON(req.body);
 
   // Re-direct the browser back to the page, where the POST request came from
   res.redirect('back');
+	
+			//=====================================================================================
+		var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
+		var json = xml2jsonparser.toJson(XMLfile);
+		fs.writeFileSync('Squadstesting.json', json);
+		
+			fs.readFile('Squadstesting.json', 'utf8', (err, data) => {
+			if (err) throw err;
+			data = JSON.parse(data);
+			data = data.squad.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
+			var stringy = JSON.stringify(data);
+			console.log(data);
+			console.log(stringy);
+			fs.writeFileSync('views/squadtest.json', stringy);
+			});
+		//=====================================================================================
 
 });
 
@@ -113,27 +118,45 @@ router.post('/post/delete', function(req, res) {
   // Function to read in a JSON file, add to it & convert to XML
   function deleteJSON(obj) {
 
-    console.log(obj);
+    //console.log(obj);
     // Function to read in XML file, convert it to JSON, add a new object and write back to XML file
     xmlFileToJs('Squad.xml', function(err, result) {
       if (err) throw (err);
-      console.log(result.squad.player);
-      console.log(obj.row);
+      //console.log(result.squad.player);
+      //console.log(obj.row);
       for( var i in result.squad ) {
            delete result.squad.player[obj.row-1];
       }
-      console.log(result.squad);
+			
       jsToXmlFile('Squad.xml', result, function(err) {
         if (err) console.log(err);
       })
     })
+	
   }
 
   // Call appendJSON function and pass in body of the current POST request
   deleteJSON(req.body);
-
+	
+	//=====================================================================================
+		var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
+		var json = xml2jsonparser.toJson(XMLfile);
+		fs.writeFileSync('Squadstesting.json', json);
+		
+			fs.readFile('Squadstesting.json', 'utf8', (err, data) => {
+			if (err) throw err;
+			data = JSON.parse(data);
+			data = data.squad.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
+			var stringy = JSON.stringify(data);
+			console.log(data);
+			console.log(stringy);
+			fs.writeFileSync('views/squadtest.json', stringy);
+			});
+		//=====================================================================================
   // Re-direct the browser back to the page, where the POST request came from
   res.redirect('back');
+	
+	
 
 });
 

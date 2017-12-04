@@ -79,6 +79,8 @@ redipsInit = function () {
 	REDIPS.drag.dropMode = "single";
 	
 	REDIPS.drag.enableDrag(true);
+	
+	REDIPS.drag.loadContent('tableleft', 'squadtest.json');
 };
 
 
