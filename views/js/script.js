@@ -80,7 +80,7 @@ redipsInit = function () {
 	
 	REDIPS.drag.enableDrag(true);
 	
-	REDIPS.drag.loadContent('tableleft', 'squadtest.json');
+	REDIPS.drag.loadContent('tableleft', 'lefttable.json');
 };
 
 
@@ -121,9 +121,11 @@ redips.button1 = function () {
 						REDIPS.drag.loadContent(redips.targetTable, parsed2);
 						}	
 					});*/
+	
 	//clear table before loading content
 	REDIPS.drag.clearTable('table1');
-	REDIPS.drag.loadContent(redips.targetTable, 'test.json');
+	
+	REDIPS.drag.loadContent(redips.targetTable, 'pitchtable.json');
 };
 
 

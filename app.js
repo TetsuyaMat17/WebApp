@@ -65,6 +65,22 @@ router.post('/post/json', function(req, res) {
       result.squad.player.push(obj);
       jsToXmlFile('Squad.xml', result, function(err) {
         if (err) console.log(err);
+				
+				//=====================================================================================
+				var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
+				var json = xml2jsonparser.toJson(XMLfile);
+				fs.writeFileSync('squaddata.json', json);
+
+					fs.readFile('squaddata.json', 'utf8', (err, data) => {
+					if (err) throw err;
+					data = JSON.parse(data);
+					data = data.squad.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
+					var stringy = JSON.stringify(data);
+					//console.log(data);
+					//console.log(stringy);
+					fs.writeFileSync('views/lefttable.json', stringy);
+					});
+				//=====================================================================================
       })
     })
     
@@ -78,22 +94,6 @@ router.post('/post/json', function(req, res) {
   // Re-direct the browser back to the page, where the POST request came from
   res.redirect('back');
 	
-			//=====================================================================================
-		var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
-		var json = xml2jsonparser.toJson(XMLfile);
-		fs.writeFileSync('Squadstesting.json', json);
-		
-			fs.readFile('Squadstesting.json', 'utf8', (err, data) => {
-			if (err) throw err;
-			data = JSON.parse(data);
-			data = data.squad.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
-			var stringy = JSON.stringify(data);
-			console.log(data);
-			console.log(stringy);
-			fs.writeFileSync('views/squadtest.json', stringy);
-			});
-		//=====================================================================================
-
 });
 
 router.post('/post/delete', function(req, res) {
@@ -130,33 +130,32 @@ router.post('/post/delete', function(req, res) {
 			
       jsToXmlFile('Squad.xml', result, function(err) {
         if (err) console.log(err);
+				
+				//=====================================================================================
+				var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
+				var json = xml2jsonparser.toJson(XMLfile);
+				fs.writeFileSync('squaddata.json', json);
+
+					fs.readFile('squaddata.json', 'utf8', (err, data) => {
+					if (err) throw err;
+					data = JSON.parse(data);
+					data = data.squad.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
+					var stringy = JSON.stringify(data);
+					//console.log(data);
+					//console.log(stringy);
+					fs.writeFileSync('views/lefttable.json', stringy);
+					});
+				//=====================================================================================
       })
     })
-	
   }
 
   // Call appendJSON function and pass in body of the current POST request
   deleteJSON(req.body);
-	
-	//=====================================================================================
-		var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
-		var json = xml2jsonparser.toJson(XMLfile);
-		fs.writeFileSync('Squadstesting.json', json);
-		
-			fs.readFile('Squadstesting.json', 'utf8', (err, data) => {
-			if (err) throw err;
-			data = JSON.parse(data);
-			data = data.squad.player.map( (s,i) => ( [ s.Name , i, 0, "" , s.Name ] ) );
-			var stringy = JSON.stringify(data);
-			console.log(data);
-			console.log(stringy);
-			fs.writeFileSync('views/squadtest.json', stringy);
-			});
-		//=====================================================================================
   // Re-direct the browser back to the page, where the POST request came from
   res.redirect('back');
 	
-	
+
 
 });
 
@@ -168,7 +167,7 @@ router.post('/post6/json', function(req, res) {
 
 	var parsedContent = JSON.parse(content);
 	
-		fs.writeFile('views/test.json', parsedContent,'utf8', function (err) {
+		fs.writeFile('views/pitchtable.json', parsedContent,'utf8', function (err) {
 			if (err) {
 				// append failed
 			} else {
