@@ -121,33 +121,12 @@ redips.button1 = function () {
 						REDIPS.drag.loadContent(redips.targetTable, parsed2);
 						}	
 					});*/
-	
+	//clear table before loading content
+	REDIPS.drag.clearTable('table1');
 	REDIPS.drag.loadContent(redips.targetTable, 'test.json');
 };
 
 
-// method called on button2 click
-// JSON data is put as second parameter
-redips.button2 = function () {
-		
-	var tabletest = $('#table1').tableToJSON();
-	/*var table_content;
-	// prepare table content of first table in JSON format or as plain query string (depends on value of "type" variable)
-	table_content = REDIPS.drag.saveContent('table1');*/
-	console.log(tabletest);
-	alert(JSON.stringify(tabletest)); 
-	
-	REDIPS.drag.loadContent('myTable', JSON.stringify(tabletest));
-	//REDIPS.drag.loadContent('myTable', [["d6", 0, 1, "green", "B1"], ["d6", 6, 2, "green", "B2"], ["d7", 7, 4, "green", "B3"]]);
-};
-
-
-redips.button3 = function () {
-	// prepare JSON data to place to the HTML table
-	var data = document.getElementById('textField').value;
-	// place content to the table
-	REDIPS.drag.loadContent(redips.targetTable, data);
-};
 
 // method deletes all DIV elements with redips-drag class name from table with id=myTable
 redips.clearTable = function () {

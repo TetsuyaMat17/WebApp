@@ -36,8 +36,8 @@ body {
 	filter: alpha(opacity=70);
 	/* without width, IE6/7 will not apply filter/opacity to the element ?! */
 	/* IE needs element layout */
-	width: 50px;
-	border: 2px solid #BF6A30;
+	width: 70px;
+	border: 2px solid #3069bf;
 	/* round corners */
 	border-radius: 4px; /* Opera, Chrome */
 	-moz-border-radius: 4px; /* FF */
