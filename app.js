@@ -16,9 +16,9 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
 
 // GET request to dislay index.html located inside /views folder
-router.get('/', function(req, res) {
+/*uter.get('/', function(req, res) {
   res.render('index');
-});
+});*/
 
 // HTML produced by XSL Transformation
 router.get('/get/html', function(req, res) {
@@ -153,8 +153,8 @@ router.post('/post/delete', function(req, res) {
   // Call appendJSON function and pass in body of the current POST request
   deleteJSON(req.body);
   // Re-direct the browser back to the page, where the POST request came from
-  res.redirect('back');
-	
+  //Reload moved to jQuery client side
+	//res.redirect('back');
 
 
 });
