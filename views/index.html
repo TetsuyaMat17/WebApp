@@ -1,64 +1,162 @@
-<!Doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
+  <head>
 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<head>
-	<title>Home Page</title>
-	<link rel="stylesheet" href="css/external.css"/> 
+    <title>Home</title>
 
-</head>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap1.min.css" rel="stylesheet">
 
-	<div id="navbar">
-		<a href="squadupdate.html">Squad update</a>
-		<a class ="navTxt">Squad</a>
-		<a class ="navTxt">Fixtures/Results</a>
-		<a class ="navTxt">Injury Table</a>
-		<a class ="navTxt">Team Stats</a>
-	</div>
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
 
-<body  background="images/stadium.jpg"> 
-
-	<script src="https://raw.github.com/leizongmin/js-xss/master/dist/xss.js"></script>
-	<script>
-	// apply function filterXSS in the same way
-	var html = filterXSS('<script>alert("xss");</scr' + 'ipt>');
-	alert(html);
-	</script> 
-
-
-	<div class="crest">
+  </head>
+	<!--Background image-->
+  <body class="bg" background="images/stadium.jpg">
+  
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
 		<img src="images/crest.png" alt="image of Ireland crest" style="width:80" height="80"/>
-	</div>
+        <a class="navbar-brand" href="#">Rep. of Ireland</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Squad</a>
+            </li>
+            <li class="nav-item">
+              <a href="http://www.fai.ie/ireland/senior-men/table" class ="navTxt">Results/Fixtures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Stats</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+		<!--login-->
+  <form id="emailinput">
+    <label>Enter an email address:
+    <input type="text" id="yourEmail">
+    </label>
+    <input type="submit" value="Validate" id="validate">
+  </form>
+    <!-- Page Content -->
+    <div class="container">
 
-	<div class="group">
-		<div class="bestplayers">
-			<img src="images/bestplayers.PNG" alt="image of 3 players top right">
+      <!-- Heading Row -->
+      <div class="row my-4">
+        <div class="col-lg-8">
+          <img class="img-fluid rounded" src="images/group-d.png" alt="image of group d" width="70%">
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-4">
+		<div class ="slides" content="width=device-width">
+			<img class="img-fluid rounded" class="mySlides" src="images/IrelandSquad.jpg"content="width=device-width">
 		</div>
-		<div class="group-d">
-			<img src="images/group-d.png" alt="group table top left">
-		</div>
-	</div>
-	
-	<div class = "group2">
-		<div class="eriksen">
-			<img src="images/denmark.png" alt="denmark bottom left">
-			
-			<!--div class="centered"></br>Irish</div>-->
-		</div>
-		<div class="mbappe">
-			<img src="images/mbappe.jpeg" alt="bottom center pic">
-			<!--<div class="textbox2">Week 6</br>Star Player</div>-->
-		</div>
-		<div class="worldCup">
-			<img src="images/worldCup.jpg" alt="bottom right pic">
-		</div>
-	</div>
-	
-	<div class = "scores">
-		<iframe src='http://www.goalserve.com/updaters/soccerupdate.aspx' width="616" height="150"
-		frameborder="3" marginwidth="0" marginheight="0" scrolling="auto" ></iframe>
-	</div>
+          <a class="btn btn-primary btn-lg" href="squads.html">Pick your squad!</a>
+        </div>
 		
-</html>
+			
+		
+		
+        <!-- /.col-md-4 -->
+      </div>
+      <!-- /.row -->
 
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+			<img src="images/denmark.png" alt="image of eriksen" style="width:100%" content="width=device-width">
+							</br>
+							</br>
+							</br>
+              <h2 class="card-title">News</h2>
+							<p class="card-text">Eriksen Hat-trick breaks Irish hearts.</p>
+            </div>
+            <div class="card-footer">
+              <a href="http://www.fai.ie/ireland/match/17/2018/2023303" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+			<img src="images/stats.PNG" alt="image of irish stats" style="width:100%" content="width=device-width">
+              <h2 class="card-title">Player Stats</h2>
+              <p class="card-text">Irelands world cup statistics.</p>
+            </div>
+            <div class="card-footer">
+              <a href="https://www.11v11.com/teams/republic-of-ireland/tab/players/" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Card Three</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; WebApp CA3 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	<script>
+	var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+
+  </body>
+
+</html>

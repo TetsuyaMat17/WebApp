@@ -1,0 +1,25 @@
+
+body {
+  padding-top: 54px;
+  background);
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+.bg{
+	 background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.slides{
+	float:right;
+	opacity:.9;
+	margin-right:26%
+}
+
