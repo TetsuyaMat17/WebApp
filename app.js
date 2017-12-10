@@ -20,6 +20,35 @@ router.use(bodyParser.json());
   res.render('index');
 });*/
 
+//================================================
+//XSD Validation
+var xsd = require('libxml-xsd');
+ 
+xsd.parseFile('Squad.xsd', function(err, schema){
+  schema.validate('Squad.xml', function(err, validationErrors){
+    // err contains any technical error 
+    // validationError is an array, null if the validation is ok
+		console.log('done');
+  });  
+});
+
+/*var x = require('libxmljs');
+
+var xsd = '<?xml version="1.0" encoding="utf-8" ?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://example.com/XMLSchema/1.0" targetNamespace="http://example.com/XMLSchema/1.0" elementFormDefault="qualified" attributeFormDefault="unqualified"><xs:element name="foo"></xs:element></xs:schema>'
+var xsdDoc = x.parseXmlString(xsd);
+
+var xml0 = 'Squad.xml';
+var xmlDoc0 = x.parseXmlString(xml0);
+var xml1 = 'Squad.xml';
+var xmlDoc1 = x.parseXmlString(xml1);
+
+var result0 = xmlDoc0.validate(xsdDoc);
+console.log("result0:", result0);
+
+var result1 = xmlDoc1.validate(xsdDoc);
+console.log("result1:", result1);*/
+//=================================================
+
 // HTML produced by XSL Transformation
 router.get('/get/html', function(req, res) {
   

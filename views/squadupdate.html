@@ -5,7 +5,12 @@
 <head>
   <title>Republic of Ireland Squad</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+	    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap1.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+   <!--<link rel="stylesheet" href="/css/bootstrap.min.css">-->
   <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
   <style>
     body {
@@ -46,9 +51,17 @@
       }
     
   </script>
-	
 	<script>
-		function load() {
+		function takeMeBack () {
+			window.location(window.history.go(-1));
+		}
+		function getHistoryLength () {
+			var 1 = window.history.length;
+			return 1;
+		}
+	</script>
+  <script>
+    function load() {
       $.ajax({
         url: "/get/html",
         cache: false,
@@ -79,19 +92,10 @@
       load();
     });
   </script>
-	<script>
-		function validateForm() {
-    	var x = document.forms["myForm"]["Position"]["Name"]["Squad_No"]["Club"]["Age"].value;
-    	if (x == "") {
-        alert("Please complete each field");
-        return false;
-    }
-}
-</script>
-</head>
 
-<body>
-	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+</head>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
 		<img src="images/crest.png" alt="image of Ireland crest" style="width:80" height="80"/>
         <a class="navbar-brand" href="#">Rep. of Ireland</a>
@@ -101,21 +105,29 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li class="nav-item">
-              <a href="squads.html">Squads</a>
+              <a  class="nav-link" href="squads.html">Squad</a>
             </li>
             <li class="nav-item">
-              <a href="http://www.fai.ie/ireland/senior-men/table" class ="navTxt">Results/Fixtures</a>
+              <a  class ="nav-link" href="http://www.fai.ie/ireland/senior-men/table">Results/Fixtures</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Stats</a>
+              <a class="nav-link" href="https://www.11v11.com/teams/republic-of-ireland/tab/players/">Stats</a>
+            </li>
+						<li class="nav-item">
+              <a class="nav-link" href="squadupdate.html">Call ups</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+		</br>
+		</br>
+<body>
   <form id="emailinput">
     <label>Enter an email address:
     <input type="text" id="yourEmail">
@@ -133,39 +145,35 @@
     <div class="row">
       <div id="results" class="span8">
       </div>
-      <div class="span4">
+      <div class="form-group">
         <ul class="nav nav-list well">
           <li>
-            <form name="myForm" enctype='application/json' action="/post/json" onsubmit="return validateForm()" method="post">
-              <div class="field">
-                <input type="text" name="Position" placeholder="Position">
+            <form enctype='application/json' action="/post/json" method="post">
+              <div class="form-group">
+                <input class="form-control" type="text" name="Position" placeholder="Position">
               </div>
-              <div class="field">
-                <input type="text" name="Name" placeholder="Name">
+              <div class="form-group">
+                <input class="form-control" type="text" name="Name" placeholder="Name">
               </div>
-              <div class="field">
-                <input type="text" name="Squad_No" placeholder="Squad Number">
+              <div class="form-group">
+                <input class="form-control" type="text" name="Squad_No" placeholder="Squad Number">
               </div>
-              <div class="field">
-                <input type="text" name="Club" placeholder="Club">
+              <div class="form-group">
+                <input class="form-control" type="text" name="Club" placeholder="Club">
               </div>
-              <div class="field">
-                <input type="text" name="Age" placeholder="Age">
+              <div class="form-group">
+                <input class="form-control" type="text" name="Age" placeholder="Age">
               </div>
-              <div class="field">
-                <button type="submit">Submit</button>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
-                <button id="delete">Delete</button>
+                <button id="delete" class="btn btn-primary">Delete</button>
           </li>
         </ul>
       </div>
     </div>
   </div>
-    <h1><a href="squads.html">Squads</a></h1>
-		<h2><a href="index.html">Home</a></h2>
-		
-		<br><br><br>
 </body>
 
 </html>

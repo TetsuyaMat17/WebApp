@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+         <!-- XML Schema Generated from XML Document on Sun Dec 10 2017 14:07:37 GMT+0000 (GMT Standard Time) -->
+         <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+         <xs:element name="squad">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="player" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="Position" type="xs:string"></xs:element>
+                                             <xs:element name="Squad_No" type="xs:int"></xs:element>
+                                             <xs:element name="Name" type="xs:string"></xs:element>
+                                             <xs:element name="Club" type="xs:string"></xs:element>
+                                             <xs:element name="Age" type="xs:int"></xs:element>
+                                       </xs:sequence>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
