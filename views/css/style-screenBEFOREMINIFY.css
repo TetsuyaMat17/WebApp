@@ -1,0 +1,172 @@
+/*
+
+Darko Bunic
+http://www.redips.net/
+May, 2011.
+
+*/
+
+body {
+	font-family: arial;
+	margin: 0px; /* for IE */
+}
+
+/* page title */
+.title {
+	margin: auto;
+	display: table;
+	text-align: center;
+}
+
+#table1 {
+	border-collapse: collapse; 
+	border: 1px solid #839E99;
+  background: #f1f8ee; 
+}
+
+#table1 { position: relative;
+				margin: 0 auto;
+				background: url("../footballpitch.jpg") no-repeat;
+				border-radius: 25px;
+				border-collapse: collapse;
+				}
+				
+				#table3{
+					margin: 0 auto;
+				}	
+
+/* drag objects (DIV inside table cells) */
+.redips-drag {
+	cursor: move;
+	margin: auto;
+	z-index: 10;
+	background-color: white;
+	text-align: center;
+	font-size: 10pt; /* needed for cloned object */
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	/* without width, IE6/7 will not apply filter/opacity to the element ?! */
+	/* IE needs element layout */
+	width: 70px;
+	border: 2px solid #3069bf;
+	/* round corners */
+	border-radius: 4px; /* Opera, Chrome */
+	-moz-border-radius: 4px; /* FF */
+}
+
+		#main_container #left {
+			/*to make left container scrollable,*/
+			overflow: auto;
+			position: relative;
+			width: 110px;
+			height: 340px;
+			float: left;
+			margin-right: 20px;
+			/* make it visible */
+			border-radius: 25px
+		}
+
+/* drag container*/
+#redips-drag {
+	margin: auto;
+	width: 870px;
+	display: table;
+}
+		/* container for the left table */
+		#left_container{
+
+			float: left;
+			margin-right: 20px;
+			/* needed for IE8 to calculate width of left container */
+			border-bottom: 1px solid white;
+		}
+			/*#left {
+				width: 110px;
+				height:340px;
+  			overflow:auto;
+				border-radius: 25px;*/
+
+			}
+		/* container for the right table */
+		#right {
+			/* align div to the right */
+			float: left;
+		}
+
+
+/* tables general */
+div#redips-drag table {
+	background-color: #eee;
+	border-collapse: collapse;
+	border: none;
+}
+	/* table cells */
+	div#redips-drag td {
+		height: 22px;
+		border: 0;
+		/* needed for FF3/FF4 because highlighting left table cell was working strange */
+		/* if DIV element was dragged fast then left table cell was properly highlighted */
+		/* otherwise was not ... setting border-left to 0px solved this problem */
+		border-left: 0px;
+		text-align: center;
+		font-size: 10pt;
+		padding: 0;
+	}
+
+
+/* right tables */
+#right table {
+	float: left;
+
+}
+	#right table td {
+
+		height: 50px;
+	}
+	/* page container has two tables (to make the columns independent because of the different element sizes) */
+	.page {
+		display: table;
+	}
+
+
+/* hover div (initially this DIV is hidden on the page top) */
+#hover-div {
+	width: 240px;
+	z-index: 20;
+	border: 2px solid #cfcf3d;
+	background-color: #ffffbf;
+	font-family: arial;
+	font-size: 11px;
+	/* round corners */
+	border-radius: 4px; /* Opera, Chrome */
+	-moz-border-radius: 4px; /* FF */
+}
+
+
+/* instructions below left table */
+.instructions {
+	width: 240px;
+	margin-top: 15px;
+	color: #555;
+	font-size: 11px;
+	text-align: justify;
+}
+
+/* style tooltip content and content in dropped element */
+.content {
+	margin: 5px;
+	text-align: left;
+}
+	.content h3 {
+		text-align: center;
+	}
+	.content img {
+		marign: 10px;
+		float: left;
+	}
+	.clear {
+		clear: both;
+	}
+
+
+
