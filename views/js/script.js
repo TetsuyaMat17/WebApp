@@ -75,14 +75,13 @@ redipsInit = function () {
 		msg.innerHTML = 'Changed: ' + pos[1] + ' ' + pos[2];
 	};
 	
-	
+	//CHANGED FROM FUNCTION, TO RUN AT START OF SCRIPT
 	REDIPS.drag.dropMode = "single";
-	
+	// CHANGED FROM FUNCTION, TO RUN AT START OF SCRIPT - ALWAYS ON 
 	REDIPS.drag.enableDrag(true);
 	
 	REDIPS.drag.loadContent('tableleft', 'lefttable.json');
 };
-
 
 
 //////////////////////////////
@@ -109,76 +108,31 @@ redips.init = function () {
 };
 
 
-// method called on button1 click
-// JSON data is retrieved from server
+// Load buttonfunction, JSON data is retrieved from server
 redips.button1 = function () {
-		
-					/*$.ajax({
-						url: "/get2/tabledata",
-						success: function(json) {
-						var tabledata;
-						var parsed2 = JSON.parse(tabledata);
-						REDIPS.drag.loadContent(redips.targetTable, parsed2);
-						}	
-					});*/
-	
 	//clear table before loading content
 	REDIPS.drag.clearTable('table1');
-	
+	//loads the content from the potchtable.jsonfile
 	REDIPS.drag.loadContent(redips.targetTable, 'pitchtable.json');
 };
 
-
-
-// method deletes all DIV elements with redips-drag class name from table with id=myTable
+// method deletes all DIV elements with redips-drag class name from table
 redips.clearTable = function () {
 	REDIPS.drag.clearTable('table1');
 };
-
 ////////////////////////////////////////////////////////////////////////
 
-// toggles trash_ask parameter defined at the top
-function toggleConfirm(chk) {
-	if (chk.checked === true) {
-		REDIPS.drag.trash.question = 'Are you sure you want to delete?';
-	}
-	else {
-		REDIPS.drag.trash.question = null;
-	}
-}
-
-// toggles delete_cloned parameter defined at the top
-function toggleDeleteCloned(chk) {
-	REDIPS.drag.clone.drop = !chk.checked;
-}
-
-// enables / disables dragging
-/* CHANGED FROM FUNCTION, TO RUN AT START OF SCRIPT - ALWAYS ON 
-function toggleDragging(chk) {
-	REDIPS.drag.enableDrag(chk.checked);
-} */
-
-// function sets drop_option parameter defined at the top
-/* CHANGED FROM FUNCTION, TO RUN AT START OF SCRIPT
-function setMode(radioButton) {
-	REDIPS.drag.dropMode = "single";
-}*/	
-
-
-// show prepared content for saving
+// Save function, to save the save from the pitch table
 function save(type) {
 	// define table_content variable
 	var table_content;
-	// prepare table content of first table in JSON format or as plain query string (depends on value of "type" variable)
+	// prepare table content of first table in JSON format
 	table_content = REDIPS.drag.saveContent('table1', type);
-
 	// if content doesn't exist
 	if (!table_content) {
 		alert('Table is empty!');
 	}
-	// display query string
 	else if (type === 'json') {
-
 		$.ajax({
 				type: "POST",
 				url:"post6/json",
@@ -192,7 +146,6 @@ function save(type) {
 		alert('Data was succesfully captured');
 	}
 }
-
 
 
 //add onload event listener

@@ -17,13 +17,34 @@ router.use(bodyParser.json());
 
 //==============================================
 //SECURITY
+//session security
+/*var expresssession = require('express-session')
 
+router.use(expresssession({
+  secret: 's3Cur3',
+  name: 'sessionId'
+}))*/
+
+//cookie security
+var session = require('cookie-session')
+var expiryDate = new Date(Date.now() + 60 * 60 * 1000) // 1 hour
+router.use(session({
+  name: 'session',
+  keys: ['key1', 'key2'],
+  cookie: {
+    secure: true,
+    httpOnly: true,
+    domain: 'webapp-x15045111859534.codeanyapp.com',
+    path: 'foo/bar',
+    expires: expiryDate
+  }
+}));
 //helmet for security
 var helmet = require('helmet');
 
 router.use(helmet({
 	frameguard:{action: 'deny'}
-}));
+}))
 
 router.use(helmet.contentSecurityPolicy({
   directives: {
@@ -91,7 +112,7 @@ router.get('/get/html', function(req, res) {
   
 });
 
-// POST request to add to JSON & XML files
+// POST request to add
 router.post('/post/json', function(req, res) {
   
    function xmlFileToJs(filename, cb) {
@@ -121,6 +142,7 @@ router.post('/post/json', function(req, res) {
         if (err) console.log(err);
 				
 				//=====================================================================================
+				//To create json file to for loading the left table
 				var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
 				var json = xml2jsonparser.toJson(XMLfile);
 				fs.writeFileSync('squaddata.json', json);
@@ -138,8 +160,6 @@ router.post('/post/json', function(req, res) {
       })
     })
     
-	
-				
   }
 	
 	// Call appendJSON function and pass in body of the current POST request
@@ -150,8 +170,8 @@ router.post('/post/json', function(req, res) {
 	
 });
 
+//Delete POST request
 router.post('/post/delete', function(req, res) {
-
   // Function to read in XML file and convert it to JSON
   function xmlFileToJs(filename, cb) {
     var filepath = path.normalize(path.join(__dirname, filename));
@@ -186,6 +206,7 @@ router.post('/post/delete', function(req, res) {
         if (err) console.log(err);
 				
 				//=====================================================================================
+				//To create json file to for loading the left table
 				var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
 				var json = xml2jsonparser.toJson(XMLfile);
 				fs.writeFileSync('squaddata.json', json);
@@ -209,12 +230,10 @@ router.post('/post/delete', function(req, res) {
   // Re-direct the browser back to the page, where the POST request came from
   //Reload moved to jQuery client side
 	//res.redirect('back');
-
-
 });
 
 
-
+//POST request to save json file for loading on the pitchtable
 router.post('/post6/json', function(req, res) {
  
 	var content = req.body.table_content;
