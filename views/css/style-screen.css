@@ -24,6 +24,17 @@ body {
   background: #f1f8ee; 
 }
 
+#table1 { position: relative;
+				margin: 0 auto;
+				background: url("../footballpitch.jpg") no-repeat;
+				border-radius: 25px;
+				border-collapse: collapse;
+				}
+				
+				#table3{
+					margin: 0 auto;
+				}	
+
 /* drag objects (DIV inside table cells) */
 .redips-drag {
 	cursor: move;

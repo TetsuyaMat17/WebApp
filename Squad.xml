@@ -189,4 +189,11 @@
     <Club>Ipswich</Club>
     <Age>30</Age>
   </player>
+  <player>
+    <Position/>
+    <Name/>
+    <Squad_No/>
+    <Club/>
+    <Age/>
+  </player>
 </squad>

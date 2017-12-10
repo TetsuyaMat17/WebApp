@@ -15,10 +15,35 @@ router.use(express.static(path.resolve(__dirname, 'views')));
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
 
-// GET request to dislay index.html located inside /views folder
-/*uter.get('/', function(req, res) {
-  res.render('index');
-});*/
+//==============================================
+//SECURITY
+
+//helmet for security
+var helmet = require('helmet');
+
+router.use(helmet({
+	frameguard:{action: 'deny'}
+}));
+
+router.use(helmet.contentSecurityPolicy({
+  directives: {
+    defaultSrc: ["'self'"],
+    styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
+  }
+}))
+//Rate limiter for DDOS
+var RateLimit = require('express-rate-limit');
+ 
+var limiter = new RateLimit({
+  windowMs: 15*60*1000, // 15 minutes 
+  max: 100, // limit each IP to 100 requests per windowMs 
+  delayMs: 0 // disable delaying - full speed until the max limit is reached 
+});
+ 
+//  apply to all requests 
+router.use(limiter);
+
+//================================================
 
 //================================================
 //XSD Validation

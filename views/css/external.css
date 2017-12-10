@@ -86,3 +86,21 @@ position:static;
 	margin-left:300px;
 
 	}
+
+    body {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      
+    }
+    
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+      border: 1px solid black;
+      text-align: center;
+    }
+    .selected {
+      background-color:green;
+      color: #00ff00;
+    }
