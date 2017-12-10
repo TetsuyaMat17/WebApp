@@ -46,17 +46,9 @@
       }
     
   </script>
+	
 	<script>
-		function takeMeBack () {
-			window.location(window.history.go(-1));
-		}
-		function getHistoryLength () {
-			var 1 = window.history.length;
-			return 1;
-		}
-	</script>
-  <script>
-    function load() {
+		function load() {
       $.ajax({
         url: "/get/html",
         cache: false,
@@ -87,10 +79,43 @@
       load();
     });
   </script>
-
+	<script>
+		function validateForm() {
+    	var x = document.forms["myForm"]["Position"]["Name"]["Squad_No"]["Club"]["Age"].value;
+    	if (x == "") {
+        alert("Please complete each field");
+        return false;
+    }
+}
+</script>
 </head>
 
 <body>
+	    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+		<img src="images/crest.png" alt="image of Ireland crest" style="width:80" height="80"/>
+        <a class="navbar-brand" href="#">Rep. of Ireland</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="squads.html">Squads</a>
+            </li>
+            <li class="nav-item">
+              <a href="http://www.fai.ie/ireland/senior-men/table" class ="navTxt">Results/Fixtures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Stats</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   <form id="emailinput">
     <label>Enter an email address:
     <input type="text" id="yourEmail">
@@ -111,7 +136,7 @@
       <div class="span4">
         <ul class="nav nav-list well">
           <li>
-            <form enctype='application/json' action="/post/json" method="post">
+            <form name="myForm" enctype='application/json' action="/post/json" onsubmit="return validateForm()" method="post">
               <div class="field">
                 <input type="text" name="Position" placeholder="Position">
               </div>
@@ -138,6 +163,7 @@
     </div>
   </div>
     <h1><a href="squads.html">Squads</a></h1>
+		<h2><a href="index.html">Home</a></h2>
 		
 		<br><br><br>
 </body>
