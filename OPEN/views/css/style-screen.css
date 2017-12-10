@@ -18,6 +18,23 @@ body {
 	text-align: center;
 }
 
+#table1 {
+	border-collapse: collapse; 
+	border: 1px solid #839E99;
+  background: #f1f8ee; 
+}
+
+#table1 { position: relative;
+				margin: 0 auto;
+				background: url("../footballpitch.jpg") no-repeat;
+				border-radius: 25px;
+				border-collapse: collapse;
+				}
+				
+				#table3{
+					margin: 0 auto;
+				}	
+
 /* drag objects (DIV inside table cells) */
 .redips-drag {
 	cursor: move;
@@ -30,13 +47,24 @@ body {
 	filter: alpha(opacity=70);
 	/* without width, IE6/7 will not apply filter/opacity to the element ?! */
 	/* IE needs element layout */
-	width: 50px;
-	border: 2px solid #BF6A30;
+	width: 70px;
+	border: 2px solid #3069bf;
 	/* round corners */
 	border-radius: 4px; /* Opera, Chrome */
 	-moz-border-radius: 4px; /* FF */
 }
 
+		#main_container #left {
+			/*to make left container scrollable,*/
+			overflow: auto;
+			position: relative;
+			width: 110px;
+			height: 340px;
+			float: left;
+			margin-right: 20px;
+			/* make it visible */
+			border-radius: 25px
+		}
 
 /* drag container*/
 #redips-drag {
@@ -46,20 +74,23 @@ body {
 }
 		/* container for the left table */
 		#left_container{
-			width: 260px;
+
 			float: left;
 			margin-right: 20px;
 			/* needed for IE8 to calculate width of left container */
 			border-bottom: 1px solid white;
 		}
-			#left {
-				width: 260px;
+			/*#left {
+				width: 110px;
+				height:340px;
+  			overflow:auto;
+				border-radius: 25px;*/
+
 			}
 		/* container for the right table */
 		#right {
 			/* align div to the right */
-			float: right;
-			background-color: #eee;
+			float: left;
 		}
 
 
@@ -67,29 +98,29 @@ body {
 div#redips-drag table {
 	background-color: #eee;
 	border-collapse: collapse;
+	border: none;
 }
 	/* table cells */
 	div#redips-drag td {
 		height: 22px;
-		border: 1px solid white;
+		border: 0;
 		/* needed for FF3/FF4 because highlighting left table cell was working strange */
 		/* if DIV element was dragged fast then left table cell was properly highlighted */
 		/* otherwise was not ... setting border-left to 0px solved this problem */
 		border-left: 0px;
 		text-align: center;
 		font-size: 10pt;
-		padding: 2px;
+		padding: 0;
 	}
 
 
 /* right tables */
 #right table {
 	float: left;
-	background-color: #808EA3;
-	width: 300px;
+
 }
 	#right table td {
-		background-color: #808EA3;
+
 		height: 50px;
 	}
 	/* page container has two tables (to make the columns independent because of the different element sizes) */

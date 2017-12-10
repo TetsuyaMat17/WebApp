@@ -25,7 +25,7 @@ router.use(expresssession({
   name: 'sessionId'
 }))*/
 
-//cookie security
+/*//cookie security
 var session = require('cookie-session')
 var expiryDate = new Date(Date.now() + 60 * 60 * 1000) // 1 hour
 router.use(session({
@@ -38,7 +38,8 @@ router.use(session({
     path: 'foo/bar',
     expires: expiryDate
   }
-}));
+}));*/
+
 //helmet for security
 var helmet = require('helmet');
 
@@ -206,7 +207,7 @@ router.post('/post/delete', function(req, res) {
         if (err) console.log(err);
 				
 				//=====================================================================================
-				//To create json file to for loading the left table
+				//To create json file for loading the left table
 				var XMLfile = fs.readFileSync('Squad.xml', 'utf8');
 				var json = xml2jsonparser.toJson(XMLfile);
 				fs.writeFileSync('squaddata.json', json);

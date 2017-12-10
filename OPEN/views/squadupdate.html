@@ -1,0 +1,161 @@
+<!--The code below is based on code by Mikhail Timofeev-->
+<!doctype html>
+<html lang="en" ng-app>
+
+<head>
+  <title>Republic of Ireland Squad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap1.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+   <!--<link rel="stylesheet" href="/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+	<link href="css/external.css" rel="stylesheet">
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script>
+    window.addEventListener('load', loader, false);
+    function loader (e) {
+      e.preventDefault ();
+      document.getElementById('emailinput').addEventListener
+        ('submit', validateEmail, false);
+    }
+    
+    function validateEmail (e) {
+      var re = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b/i;
+      if (re.test (e.target.yourEmail.value)) {
+        alert("valid!");
+      } else{
+        alert ("invalid!");
+      }
+      }
+    
+  </script>
+	<script>
+		function takeMeBack () {
+			window.location(window.history.go(-1));
+		}
+		function getHistoryLength () {
+			var 1 = window.history.length;
+			return 1;
+		}
+	</script>
+  <script>
+    function load() {
+      $.ajax({
+        url: "/get/html",
+        cache: false,
+        success: function(html) {
+          $("#results").append(html);
+          $("#table tbody tr").click(function () {
+            $(".selected").removeClass("selected");
+            $(this).addClass("selected");
+            var $row=$(this).attr("id");   
+            var $info=$(this).attr("info");
+            $("#delete").click( function() {
+              $.ajax({
+                url: "/post/delete",
+                cache: false,
+                type: "POST",
+                data: { row:$row }
+								
+              })
+							location.reload();
+            })
+
+          })
+        }
+      });
+    };
+
+    $(document).ready(function() {
+      load();
+    });
+  </script>
+
+</head>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+		<img src="images/crest.png" alt="image of Ireland crest" style="width:80" height="80"/>
+        <a class="navbar-brand" href="#">Rep. of Ireland</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a  class="nav-link" href="squads.html">Squad</a>
+            </li>
+            <li class="nav-item">
+              <a  class ="nav-link" href="http://www.fai.ie/ireland/senior-men/table">Results/Fixtures</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.11v11.com/teams/republic-of-ireland/tab/players/">Stats</a>
+            </li>
+						<li class="nav-item">
+              <a class="nav-link" href="squadupdate.html">Call ups</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+		</br>
+		</br>
+<body>
+  <form id="emailinput">
+    <label>Enter an email address:
+    <input type="text" id="yourEmail">
+    </label>
+    <input type="submit" value="Validate" id="validate">
+  </form>
+  <div class="container">
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+      </div>
+    </div>
+    <div class="page-header">
+      <h1>Republic of Ireland Squad</h1>
+    </div>
+    <div class="row">
+      <div id="results" class="span8">
+      </div>
+      <div class="form-group">
+        <ul class="nav nav-list well">
+          <li>
+            <form enctype='application/json' action="/post/json" method="post">
+              <div class="form-group">
+                <input class="form-control" type="text" name="Position" placeholder="Position">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" name="Name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" name="Squad_No" placeholder="Squad Number">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" name="Club" placeholder="Club">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" name="Age" placeholder="Age">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+                <button id="delete" class="btn btn-primary">Delete</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
